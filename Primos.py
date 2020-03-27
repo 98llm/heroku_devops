@@ -1,3 +1,4 @@
+lista=[]
 rotativo = 0
 nprimos = 0
 numero = 0
@@ -9,5 +10,6 @@ while nprimos < 100:
             rotativo = i
     numero += 1
     if divisores_q == 2:
-        print(rotativo, end=" ")
+        lista.append(rotativo)
         nprimos += 1
+print(lista)
