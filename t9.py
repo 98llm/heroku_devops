@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def nao_entre_em_panico():
-    lista=[]
+    lista = []
     rotativo = 0
     nprimos = 0
     numero = 0
@@ -20,7 +20,8 @@ def nao_entre_em_panico():
         if divisores_q == 2:
             lista.append(rotativo)
             nprimos += 1
-    return(lista)
+    return str(lista).strip('[]')
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
